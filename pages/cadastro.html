@@ -36,6 +36,15 @@
       crossorigin="anonymous"
     ></script>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+      integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"></script>
+
     <title>iFit</title>
   </head>
   <body class="main-container">
@@ -69,19 +78,80 @@
             <p>Todos os campos com * são obrigatórios.</p>
           </div>
           <div class="col-12">
-            <form>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input
-                  type="email"
+            <form id="formularioCadastro">
+              <div class="form-group mb-3">
+                <label for="tipo">Tipo:</label>
+                <select
                   class="form-control"
-                  id="email"
-                  aria-describedby="emailHelp"
-                />
+                  id="tipo"
+                  onchange="mostrarCampos()"
+                >
+                  <option value="consumidor">Consumidor</option>
+                  <option value="prestador">Prestador de serviços</option>
+                </select>
               </div>
-              <div class="mb-3">
-                <label for="senha" class="form-label">Cadastre uma senha</label>
-                <input type="password" class="form-control" id="senha" />
+
+              <div id="camposConsumidor" style="display: none">
+                <!-- Campos adicionais para o tipo "Consumidor" -->
+                <div class="mb-3">
+                  <label for="nome" class="form-label">*Nome completo</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nome"
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">*Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="emailConsumidor"
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="senha" class="form-label"
+                    >*Cadastre uma senha</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="senhaConsumidor"
+                  />
+                </div>
+              </div>
+
+              <div id="camposPrestador" style="display: none">
+                <div class="mb-3">
+                  <label for="cnpj" class="form-label">*CNPJ</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cnpj"
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">*Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="emailPrestador"
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="senha" class="form-label"
+                    >*Cadastre uma senha</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="senhaPrestador"
+                  />
+                </div>
               </div>
               <div class="mb-3 form-check">
                 <input
@@ -90,16 +160,17 @@
                   id="exampleCheck1"
                 />
                 <label class="form-check-label" for="exampleCheck1"
-                  >Concordo com os termos de privacidade.</label
+                  >*Concordo com os termos de privacidade.</label
                 >
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary" id="cadastrar">
+                Enviar
+              </button>
             </form>
           </div>
         </div>
       </div>
     </section>
-
     <footer class="bg-light margin-padrao">
       <div class="container">
         <div class="row">
