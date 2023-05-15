@@ -1,3 +1,4 @@
+
 function handleMenu() {
     const header = document.querySelector(".header");
     const container = document.querySelector(".main-container");
@@ -87,7 +88,7 @@ $('#cadastrar').on("click",function(){
   };
 
   $('#formularioCadastro').ajaxSubmit({
-    url: 'http://127.0.0.1:5500/assets/json/usuarios.json',
+    url: './assets/json/usuarios.json',
     type: 'POST',
     dataType: 'json',
     data: JSON.stringify(novoUsuario),
@@ -105,10 +106,6 @@ $('#cadastrar').on("click",function(){
   });
 });
   
-
-
-
-
 $(document).ready(function(){
 
   $('#cnpj').mask('00.000.000/0000-00', {reverse: true});
