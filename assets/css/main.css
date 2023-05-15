@@ -1,0 +1,45 @@
+* {
+  font-family: 'Lato', sans-serif;
+  --titulo-secao: #810000;
+}
+
+.margin-padrao {
+  margin-top: 5rem;
+}
+
+section h1 {
+  color: var(--titulo-secao);
+}
+
+/* ##################### FIM DOS ESTILOS PADRÕES */
+
+/* ##################### ÍNICIO ESTILOS DA SEÇÃO SOBRE */
+.card-sobre-esquerda {
+  box-shadow: 0px 0px 9px 0px rgb(0 0 0 / 10%);
+  border-radius: 22px;
+}
+
+.card-sobre-esquerda img {
+  border-radius: 22px 0px 0px 22px;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.card-sobre-direita {
+  box-shadow: 0px 0px 9px 0px rgb(0 0 0 / 10%);
+  border-radius: 22px;
+}
+
+.card-sobre-direita img {
+  border-radius: 0px 22px 22px 0px;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+/* ##################### FIM ESTILOS DA SEÇÃO SOBRE */
+
+section.restaurantes button {
+  background-color: transparent;
+  border: none;
+}
