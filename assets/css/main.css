@@ -11,6 +11,17 @@ section h1 {
   color: var(--titulo-secao);
 }
 
+.header--active {
+  transition: 0.3s ease-in-out;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.25);
+  z-index: 99999;
+}
+
 /* ##################### FIM DOS ESTILOS PADRÕES */
 
 /* ##################### ÍNICIO ESTILOS DA SEÇÃO SOBRE */
