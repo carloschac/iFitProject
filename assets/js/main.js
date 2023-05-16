@@ -46,70 +46,55 @@ function mostrarCampos() {
   }
 }
 
-mostrarCampos();
 
-/* FUNÇÃO PARA GERAR UM ID ALEATÓRIO PARA O CADASTRO */
-function generateUUID() {
-  var d = new Date().getTime();
-  if (typeof performance !== 'undefined' && typeof performance.now === 'function'){
-    d += performance.now(); // use high-precision timer if available
+var usuarios = [
+  {
+    "tipo": "consumidor",
+    "nome": "admin",
+    "email": "admin@admin.com",
+    "senha": "admin"
+  },
+  {
+    "tipo": "prestador",
+    "cnpj": "99.999.999/0001-99",
+    "email": "admin@admin.com",
+    "senha": "admin"
   }
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-    var r = (d + Math.random() * 16) % 16 | 0;
-    d = Math.floor(d / 16);
-    return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
-  });
-}
-
-/* FUNÇÃO PARA CRIAR UM ARQUIVO JSON QUE SALVA OS DADOS DO FORM DE CADASTRO */
-$('#cadastrar').on("click",function(){
-  var uuid = generateUUID();
-  var tipoUsuario = document.getElementById("tipo").value;
-
-  // Coletar os dados do formulário
-  var nome = document.getElementById("nome").value;
-  var emailConsumidor = document.getElementById("emailConsumidor").value;
-  var senhaConsumidor = document.getElementById("senhaConsumidor").value;
-  var cnpj = document.getElementById("cnpj").value;
-  var emailPrestador = document.getElementById("emailPrestador").value;
-  var senhaPrestador = document.getElementById("senhaPrestador").value;
- 
-
-  // Criar um novo objeto JSON com os dados do usuário, incluindo o ID
-  var novoUsuario = {
-    id: uuid,
-    nome: nome,
-    emailConsumidor: emailConsumidor,
-    senhaConsumidor: senhaConsumidor,
-    cnpj: 'cnpj',
-    emailPrestador: 'emailPrestador',
-    senhaPrestador: 'senhaPrestador',
-  };
-
-  $('#formularioCadastro').ajaxSubmit({
-    url: 'http://127.0.0.1:5500/assets/json/usuarios.json',
-    type: 'POST',
-    dataType: 'json',
-    data: JSON.stringify(novoUsuario),
-    contentType: 'application/json',
-    success: function(response) {
-      // Sucesso: O usuário foi cadastrado
-      alert('Usuário cadastrado com sucesso!');
-      window.location.href = 'index.html';
-    },
-    error: function(jqXHR, textStatus, errorThrown) {
-      // Erro: Falha ao cadastrar o usuário
-      console.error('Erro na chamada AJAX:', textStatus, errorThrown);
-      alert('Ocorreu um erro ao cadastrar o usuário. Por favor, tente novamente.');
-    }
-  });
-});
-  
-
-
-
+];
 
 $(document).ready(function(){
+
+  if($('.form-cadastro').length > 0)
+{
+  mostrarCampos();
+};
+
+if($('.form-login').length > 0)
+{
+  $('#login').click(function(e) {
+    e.preventDefault(); // Impede o envio do formulário (recarregar a página)
+
+    // Obtém os valores dos campos
+    const tipo = $('#tipo').val();
+    const email = $('#emailLogin').val();
+    const senha = $('#senhaLogin').val();
+
+    // Validação dos campos
+    if (email === 'admin@admin.com' && senha === 'admin') {
+      if (tipo === 'consumidor') {
+        // Redireciona para a página do consumidor
+        window.location.href = '/pages/portal-consumidor.html';
+      } else if (tipo === 'prestador') {
+        // Redireciona para a página do prestador
+        window.location.href = '/pages/portal-prestador.html';
+      }
+    } else {
+      // Exibe uma mensagem de erro ou toma outra ação, caso os campos não sejam válidos
+      console.log('Credenciais inválidas!');
+    }
+  });
+};
+
 
   $('#cnpj').mask('00.000.000/0000-00', {reverse: true});
    

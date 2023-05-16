@@ -1,1 +1,14 @@
-
+[
+  {
+    "tipo": "consumidor",
+    "nome": "admin",
+    "email": "admin@admin.com",
+    "senha": "admin"
+  },
+  {
+    "tipo": "prestador",
+    "cnpj": "99.999.999/0001-99",
+    "email": "admin@admin.com",
+    "senha": "admin"
+  }
+]

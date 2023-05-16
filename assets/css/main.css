@@ -54,3 +54,13 @@ section.restaurantes button {
   background-color: transparent;
   border: none;
 }
+
+/* ##################### INICIO ESTILOS DA PÁGINA CONSUMIDOR */
+.tabsUl {
+  list-style: none;
+}
+
+.tabsUl a {
+  text-decoration: none;
+  color: black;
+}

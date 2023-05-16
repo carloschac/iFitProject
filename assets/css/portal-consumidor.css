@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 170px;
+  height: 100vh;
+  background-color: #f8f9fa;
+  margin-top: 72px;
+}
+
+.content {
+  margin-left: 170px;
+  padding-top: 20px;
+}
