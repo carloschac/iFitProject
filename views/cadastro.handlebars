@@ -1,0 +1,120 @@
+    <section class="form-cadastro">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1>Cadastro</h1>
+            <p>Todos os campos com * são obrigatórios.</p>
+          </div>
+          <div class="col-12">
+            <form id="formularioCadastro" method="POST" action="/cadastro/cad">
+              <div class="form-group mb-3">
+                <label for="tipo">Tipo:</label>
+                <select
+                  class="form-control"
+                  id="tipo"
+                  name="tipo"
+                  onchange="mostrarCampos()"
+                >
+                  <option value="consumidor">Consumidor</option>
+                  <option value="prestador">Prestador de serviços</option>
+                </select>
+              </div>
+
+              <div id="camposConsumidor" style="display: none">
+                <!-- Campos adicionais para o tipo "Consumidor" -->
+                <div class="mb-3">
+                  <label for="nome" class="form-label">*Nome completo</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nome"
+                    name="nomeCompleto"
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">*Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="emailConsumidor"
+                    name="email"
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="senha" class="form-label"
+                    >*Cadastre uma senha</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="senhaConsumidor"
+                    name="senha"
+                  />
+                </div>
+              </div>
+
+              <div id="camposPrestador" style="display: none">
+                <div class="mb-3">
+                  <label for="cnpj" class="form-label">*CNPJ</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cnpj"
+                    name="cnpj"
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">*Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="emailPrestador"
+                    name="email"
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="senha" class="form-label"
+                    >*Cadastre uma senha</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="senhaPrestador"
+                    name="senha"
+                  />
+                </div>
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >*Concordo com os termos de privacidade.</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary" id="cadastrar">
+                Enviar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-light margin-padrao">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 d-flex justify-content-center pt-5">
+            <img
+              src="/img/clique.png"
+              alt="Logo da iFit"
+              class="img-fluid"
+              width="200px"
+            />
+          </div>
+        </div>

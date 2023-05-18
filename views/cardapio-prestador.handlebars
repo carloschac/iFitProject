@@ -1,0 +1,67 @@
+<div id="tabs-2">
+  <div class="container">
+    <table class="table">
+        <div id="tabs">
+          <ul class="tabsUl d-flex gap-2 p-0 pt-3">
+            <li>
+              <a href="/visualizarPedidos/portal-prestador"
+                ><button class="btn btn-primary">Cadastrar Cardapios</button>
+              </a>
+            </li>
+            <li>
+              <a href="/visualizarPedidos/cardapio-prestador"
+                ><button class="btn btn-primary">
+                  Visualizar Pedidos
+                </button></a>
+            </li>
+          </ul>
+        </div>  
+      <thead>
+        <tr>
+          <th>Refeição</th>
+          <th>Cliente</th>
+          <th>Descrição</th>
+          <th>Calorias</th>
+          <th>Proteínas</th>
+          <th>Carboidratos</th>
+          <th>Gorduras</th>
+          <th>Endereço</th>
+          <th>Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{!-- inserção do banco de dados --}}
+        {{#each visualizar_pedidos}}
+        <tr>
+          <td>{{dataValues.refeicao}}</td>
+          <td>{{dataValues.cliente}} </td>
+          <td>{{dataValues.descricao}}</td>
+          <td>{{dataValues.calorias}}</td>
+          <td>{{dataValues.proteinas}}</td>
+          <td>{{dataValues.carboidratos}}</td>
+          <td>{{dataValues.gorduras}}</td>
+          <td>{{dataValues.endereco}} </td>
+          <td>{{dataValues.valorCardapio}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-light margin-padrao">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 d-flex justify-content-center pt-5">
+        <img
+          src="/img/clique.png"
+          alt="Logo da iFit"
+          class="img-fluid"
+          width="200px"
+        />
+      </div>
+    </div>
+  </div>
+</footer>

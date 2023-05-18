@@ -1,0 +1,54 @@
+    <section class="form-login">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1>Login</h1>
+            <p>Todos os campos com * são obrigatórios.</p>
+          </div>
+          <div class="col-12">
+            <form id="formularioLogin">
+              <div class="form-group mb-3">
+                <label for="tipo">Tipo:</label>
+                <select
+                  class="form-control"
+                  id="tipo"
+                  onchange="mostrarCampos()"
+                >
+                  <option value="consumidor" id="camposConsumidor">Consumidor</option>
+                  <option value="prestador" id="camposPrestador">Prestador de serviços</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">*Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailLogin"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="senha" class="form-label">*Senha:</label>
+                <input type="password" class="form-control" id="senhaLogin" />
+              </div>
+              <button class="btn btn-primary" id="login">
+              Enviar
+              </button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-light margin-padrao">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 d-flex justify-content-center pt-5">
+            <img
+              src="/img/clique.png"
+              alt="Logo da iFit"
+              class="img-fluid"
+              width="200px"
+            />
+          </div>
+        </div>

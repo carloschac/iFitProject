@@ -1,0 +1,51 @@
+    <section class="form-cardapio">
+      <div class="container">
+        <h1 class="text-center">Gerenciar Cardápio</h1>
+        <div id="tabs">
+          <ul class="tabsUl d-flex gap-2 p-0 pt-3">
+            <li>
+              <a href="/visualizarPedidos/portal-prestador"
+                ><button class="btn btn-primary">Cadastrar Cardapios</button>
+              </a>
+            </li>
+            <li>
+              <a href="/visualizarPedidos/cardapio-prestador"
+                ><button class="btn btn-primary">
+                  Visualizar Pedidos
+                </button></a>
+            </li>
+          </ul>
+
+          <div id="tabs-1">
+            <form id="formCardapio" action="/cardapios/add" method="POST">
+              <div class="mb-3">
+                <label for="refeicao" class="form-label">Refeição</label>
+                <input type="text" class="form-control" id="refeicao" name="refeicao" required/>
+              </div>
+              <div class="mb-3">
+                <label for="descricao" class="form-label">Descrição</label>
+                <textarea class="form-control" id="descricao" name="descricao" rows="3" required></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="calorias" class="form-label">Calorias</label>
+                <input type="number" class="form-control" id="calorias" name="calorias" required/>
+              </div>
+              <div class="mb-3">
+                <label for="proteinas" class="form-label">Proteínas</label>
+                <input type="number" class="form-control" id="proteinas" name="proteinas" required/>
+              </div>
+              <div class="mb-3">
+                <label for="carboidratos" class="form-label">Carboidratos</label>
+                <input type="number" class="form-control" id="carboidratos" name="carboidratos"required/>
+              </div>
+              <div class="mb-3">
+                <label for="gorduras" class="form-label">Gorduras</label>
+                <input type="number" class="form-control" id="gorduras" name="gorduras" required/>
+              </div>
+              <div class="mb-3">
+                <label for="valorCardapio" class="form-label">Valor</label>
+                <input type="text" class="form-control" id="valorCardapio" name="valorCardapio" required/>
+              </div>
+              <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
+          </div>

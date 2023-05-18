@@ -1,0 +1,84 @@
+          <div id="tabs-1">
+            <form id="formCardapio" action="/visualizarPedidos/add" method="POST">
+              <div class="mb-3">
+                <input
+                  type="hidden"
+                  class="form-control"
+                  id="refeicao"
+                  name="refeicao"
+                  value="{{cardapios_prestadors.dataValues.refeicao}}"
+                  required
+                />
+              <div class="mb-3">
+                <label for="cliente" class="form-label">Nome Cliente</label>
+                <input type="text" class="form-control" id="cliente" name="cliente" required/>
+              </div>                
+              </div>
+              <div class="mb-3">
+                <input
+                  type="hidden"
+                  class="form-control"
+                  id="descricao"
+                  name="descricao"
+                  value="{{cardapios_prestadors.dataValues.descricao}}"
+                  required
+                ></input>
+              </div>
+              <div class="mb-3">
+                <input
+                  type="hidden"
+                  class="form-control"
+                  id="calorias"
+                  name="calorias"
+                  value="{{cardapios_prestadors.dataValues.calorias}}"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="hidden"
+                  class="form-control"
+                  id="proteinas"
+                  name="proteinas"
+                  value="{{cardapios_prestadors.dataValues.proteinas}}"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="hidden"
+                  class="form-control"
+                  id="carboidratos"
+                  name="carboidratos"
+                  value="{{cardapios_prestadors.dataValues.carboidratos}}"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="hidden"
+                  class="form-control"
+                  id="gorduras"
+                  name="gorduras"
+                  value="{{cardapios_prestadors.dataValues.gorduras}}"
+                  required
+                />
+              <div class="mb-3">
+                <label for="endereco" class="form-label">Endereço</label>
+                <input type="text" class="form-control" id="endereco" name="endereco" required/>
+              </div>                
+              </div>
+              <div class="mb-3">
+                <input
+                  type="hidden"
+                  class="form-control"
+                  id="valorCardapio"
+                  name="valorCardapio"
+                  value="{{cardapios_prestadors.dataValues.valorCardapio}}"
+                  required
+                />
+              <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
+          </div>
+
+          

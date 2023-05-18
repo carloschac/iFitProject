@@ -1,0 +1,23 @@
+{
+  "name": "ifit",
+  "version": "1.0.0",
+  "description": "Protótipo para app de alimentos saudáveis",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "node": "^20.1.0",
+    "sequelize": "^5.21.5",
+    "sqlite": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
