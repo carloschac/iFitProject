@@ -64,3 +64,16 @@ section.restaurantes button {
   text-decoration: none;
   color: black;
 }
+
+/* LOGO */
+
+.btn.btn-light {
+  font-size: 43px;
+  border: 1px solid transparent;
+  border-radius: 0;
+  outline: none;
+}
+.btn.btn-light:hover {
+  background-color: initial;
+}
+
