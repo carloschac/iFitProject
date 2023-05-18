@@ -83,10 +83,10 @@ if($('.form-login').length > 0)
     if (email === 'admin@admin.com' && senha === 'admin') {
       if (tipo === 'consumidor') {
         // Redireciona para a página do consumidor
-        window.location.href = '/pages/portal-consumidor.html';
+        window.location.href = '/cardapios/portal-consumidor';
       } else if (tipo === 'prestador') {
         // Redireciona para a página do prestador
-        window.location.href = '/pages/portal-prestador.html';
+        window.location.href = '/visualizarPedidos/portal-prestador';
       }
     } else {
       // Exibe uma mensagem de erro ou toma outra ação, caso os campos não sejam válidos
