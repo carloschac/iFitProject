@@ -1,6 +1,25 @@
 * {
   font-family: 'Lato', sans-serif;
   --titulo-secao: #810000;
+  background-color: #f9f9f9;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+header button {
+  background-color: #810000 !important;
+  color: #ffffff;
+
+  text-transform: uppercase;
+  border: none !important;
 }
 
 .margin-padrao {
@@ -76,4 +95,3 @@ section.restaurantes button {
 .btn.btn-light:hover {
   background-color: initial;
 }
-
