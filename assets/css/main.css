@@ -4,6 +4,15 @@
   --texto-secao: #506959;
 }
 
+.header {
+  background: #506959 !important;
+}
+
+.banner img {
+  max-height: 500px;
+  object-fit: cover;
+}
+
 header a {
   text-decoration: none;
   color: black;
@@ -74,7 +83,7 @@ section h1 {
 /* ##################### FIM ESTILOS DA SEÇÃO SOBRE */
 
 section.restaurantes button {
-  background-color: transparent;
+  background-color: transparent !important;
   border: none;
 }
 
