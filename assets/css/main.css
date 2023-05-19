@@ -1,7 +1,7 @@
 * {
   font-family: 'Lato', sans-serif;
-  --titulo-secao: #810000;
-  background-color: #f9f9f9;
+  --titulo-secao: #dc7860;
+  --texto-secao: #506959;
 }
 
 header a {
@@ -9,13 +9,17 @@ header a {
   color: black;
 }
 
+section p {
+  color: var(--texto-secao);
+}
+
 .nav-link {
   text-decoration: none;
   color: black;
 }
 
-header button {
-  background-color: #810000 !important;
+button {
+  background-color: #506959 !important;
   color: #ffffff;
 
   text-transform: uppercase;

@@ -5,6 +5,7 @@ const path       = require('path');
 const db         = require('./db/connection');
 const bodyParser = require('body-parser');
 const sequelize  = require('sequelize');
+const context = { imagePath: '/assets/img/logo.png' };
 
 
 const PORT = 4000;
