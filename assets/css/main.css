@@ -8,6 +8,19 @@
   background: #506959 !important;
 }
 
+footer {
+  background: #506959 !important;
+  color: #ffffff;
+}
+
+footer nav a {
+  color: #ffffff !important;
+}
+
+footer nav a:hover {
+  color: #dc7860;
+}
+
 .banner img {
   max-height: 500px;
   object-fit: cover;
